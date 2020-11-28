@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+  <title>GrayRotes - Dashboard</title>
+  <!--favicon-->
+  <link rel="icon" href="https://grayroutes.in/images/favicon11.ico" type="image/x-icon"/>
+  <!-- simplebar CSS-->
+  <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet"/>
+  <!-- Bootstrap core CSS-->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- animate CSS-->
+  <link href="assets/css/animate.css" rel="stylesheet" type="text/css"/>
+  <!-- Icons CSS-->
+  <link href="assets/css/icons.css" rel="stylesheet" type="text/css"/>
+  <!-- Sidebar CSS-->
+  <link href="assets/css/sidebar-menu.css" rel="stylesheet"/>
+  <!-- Custom Style-->
+  <link href="assets/css/app-style.css" rel="stylesheet"/>
+  <!-- skins CSS-->
+  <link href="assets/css/skins.css" rel="stylesheet"/>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+
+  <style>
+  
+  #map {  width: 100%; height: 400px }
+</style>
+  
+</head>
+
+<body>
+
+   <!-- start loader -->
+   <div id="pageloader-overlay" class="visible incoming"><div class="loader-wrapper-outer"><div class="loader-wrapper-inner"><div class="loader"></div></div></div></div>
+   <!-- end loader -->
+
+<!-- Start wrapper-->
+ <div id="wrapper">
+ 
+  <!--Start sidebar-wrapper-->
+   <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
+     <div class="brand-logo text-left pl-3">
+      <a href="index.html">
+       <img class="logo-icon" alt="logo icon" src="assets/images/logo1.png" style="width:100px;">
+       <!--<h5 class="logo-text">GrayRotes Admin</h5>-->
+     </a>
+   </div>
+  
+   <ul class="sidebar-menu">
+      <li class="sidebar-header">MAIN NAVIGATION</li>
+      <li class="active">
+        <a href="javaScript:void();" class="waves-effect">
+          <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span><i class="fa fa-angle-left pull-right"></i>
+        </a>
+		<ul class="sidebar-submenu">
+		  <li class="active"><a href=""><i class="zmdi zmdi-dot-circle-alt"></i> Inventory Dashboard </a></li>
+		 <!--  <li><a href="dashboard2.html"><i class="zmdi zmdi-dot-circle-alt"></i> Data Prediction </a></li> -->
+		</ul>
+      </li>
+     
+    </ul>
+   
+   </div>
+   <!--End sidebar-wrapper-->
+
+<!--Start topbar header-->
+<header class="topbar-nav">
+ <nav id="header-setting" class="navbar navbar-expand fixed-top">
+  <ul class="navbar-nav mr-auto align-items-center">
+    <li class="nav-item">
+      <a class="nav-link toggle-menu" href="javascript:void();">
+       <i class="icon-menu menu-icon"></i>
+     </a>
+    </li>
+  </ul>
+     
+  <ul class="navbar-nav align-items-center right-nav-link">
+    <li class="nav-item dropdown-lg">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javascript:void();">
+      <i class="fa fa-envelope-open-o"></i><span class="badge badge-primary badge-up">12</span></a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <ul class="list-group list-group-flush">
+         <li class="list-group-item d-flex justify-content-between align-items-center">
+          You have 12 new messages
+          <span class="badge badge-primary">12</span>
+          </li>
+         <!--  <li class="list-group-item">
+          <a href="javaScript:void();">
+           <div class="media">
+             <div class="avatar"><img class="align-self-start mr-3" src="https://via.placeholder.com/110x110" alt="user avatar"></div>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">Jhon Deo</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+            <small>Today, 4:10 PM</small>
+            </div>
+          </div>
+          </a>
+          </li> -->
+          <li class="list-group-item text-center"><a href="javaScript:void();">See All Messages</a></li>
+        </ul>
+        </div>
+    </li>
+    <li class="nav-item dropdown-lg">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javascript:void();">
+    <i class="fa fa-bell-o"></i><span class="badge badge-info badge-up">14</span></a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+          You have 14 Notifications
+          <span class="badge badge-info">14</span>
+          </li>
+        <!--   <li class="list-group-item">
+          <a href="javaScript:void();">
+           <div class="media">
+             <i class="zmdi zmdi-accounts fa-2x mr-3 text-info"></i>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">New Registered Users</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+            </div>
+          </div>
+          </a>
+          </li> -->
+          <li class="list-group-item text-center"><a href="javaScript:void();">See All Notifications</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
+        <span class="user-profile"><img src="assets/images/person.jpg" class="img-circle" alt="user avatar"></span>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-right">
+       <li class="dropdown-item user-details">
+        <a href="javaScript:void();">
+           <div class="media">
+             <div class="avatar"><img class="align-self-start mr-3" src="https://via.placeholder.com/110x110" alt="user avatar"></div>
+            <div class="media-body">
+            <h6 class="mt-2 user-title">Demo</h6>
+            <p class="user-subtitle">demo@grayfos.com</p>
+            </div>
+           </div>
+          </a>
+        </li>
+        <li class="dropdown-divider"></li>
+        <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
+        <li class="dropdown-divider"></li>
+        <li class="dropdown-item"><i class="icon-power mr-2"></i> Logout</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</header>
+<!--End topbar header-->
+
+<div class="clearfix"></div>
+	
+  <div class="content-wrapper">
+    <div class="container-fluid">
+
+      <!--Start Dashboard Content-->
+
+     <div class="row mt-3">
+      <!--  <div class="col-12 col-lg-6 col-xl-4">
+         <div class="card">
+           <div class="card-body">
+             <h5>Out Of Stock</h5>
+             <h3>50%</h3>
+             <p class="mb-0"><button type="button" class="btn btn-light waves-effect waves-light " data-toggle="modal" data-target="#myModal">Out Of Stock 2/In Stock - 2</button></p>
+             
+           </div>
+            <div class="progress-wrapper">
+            <div class="progress" style="height: 7px;">
+              <div class="progress-bar gradient-branding" role="progressbar" style="width: 50%"></div>
+            </div>
+             </div>
+           </div>
+       </div> -->
+       <div class="col-12 col-lg-6 col-xl-4">
+          <div class="card">
+           <div class="card-body">
+             <h5>Out Of Stock</h5>
+             <h3>50%</h3>
+             <p class="mb-0"><button type="button" class="btn btn-light waves-effect waves-light m-1" data-toggle="modal" data-target="#myModal">Out Of Stock 2/In Stock - 2</button></p>
+            
+
+           </div>
+            <div class="progress-wrapper">
+            <div class="progress" style="height: 7px;">
+              <div class="progress-bar gradient-branding" role="progressbar" style="width: 50%"></div>
+            </div>
+             </div>
+           </div>
+       </div>
+       <div class="col-12 col-lg-6 col-xl-4">
+          <div class="card">
+           <div class="card-body">
+             <h5>Return Rate</h5>
+             <h3>5%</h3>
+             <p class="mb-0"><button type="button" class="btn btn-light waves-effect waves-light m-1" data-toggle="modal" data-target="#myModal1">Return Units- 20/Total Units- 400 </button></p>
+            
+
+           </div>
+            <div class="progress-wrapper">
+            <div class="progress" style="height: 7px;">
+              <div class="progress-bar gradient-branding" role="progressbar" style="width: 5%"></div>
+            </div>
+             </div>
+           </div>
+       </div>
+       <div class="col-12 col-lg-6 col-xl-4">
+          <div class="card">
+           <div class="card-body">
+             <h5>Back Order Rate</h5>
+             <h3>11.11%</h3>
+             <p class="mb-0"><button type="button" class="btn btn-light waves-effect waves-light m-1" data-toggle="modal" data-target="#myModal2">Back Orders-10/Total Orders-90</button></p>
+           </div>
+            <div class="progress-wrapper">
+            <div class="progress" style="height: 7px;">
+              <div class="progress-bar gradient-branding" role="progressbar" style="width: 11%"></div>
+            </div>
+             </div>
+           </div>
+       </div>
+     </div><!--End Row-->
+
+
+     <div class="row">
+
+     <div class="col-12 col-lg-8 col-xl-8">
+      <div class="card">
+     <div class="card-header"><span class="pt-1 pull-left">Inventory Days Of Supply</span>
+
+      <div class="col-sm-3 pull-right">
+             <div class="input-group shipping_line_1">
+                <select id="shipping_line_1" name ="shipping_line_1" class="custom-select custom-select-sm" >
+                  <option value ="">Item 1</option>
+                  <option value ="">Item 2</option> 
+                  <option value ="">Item 3</option> 
+                  <option value ="">Item 4</option>                         
+                </select>
+            </div>
+          </div>
+
+     </div>
+     <div class="card-body">
+        <div class="row">
+          <div class="col-12 col-md-12 col-xl-12">
+            <canvas id="prediction_chart2"></canvas>
+          </div>
+        </div>
+     </div>
+     
+     
+    </div>
+   </div>
+
+
+    <div class="col-12 col-lg-4 col-xl-4">
+        <div class="card">
+           <div class="card-header">Items In Stock
+             <div class="card-action">
+             <div class="dropdown">
+             <a href="javascript:void();" class="dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown">
+              <i class="icon-options"></i>
+             </a>
+              <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="javascript:void();">Refresh</a>
+               </div>
+              </div>
+             </div>
+           </div>
+           <div class="card-body">
+              <div class="chart-container-2">
+                 <canvas id="chart2"></canvas>
+        </div>
+           </div>
+           <div class="table-responsive">
+             <table class="table align-items-center">
+               <tbody>
+                 <tr>
+                   <td><i class="fa fa-circle mr-2" style="color: #14abef"></i>Item1</td>
+                   <td>50%</td>
+                 </tr>
+                 <tr>
+                   <td><i class="fa fa-circle mr-2" style="color: #02ba5a"></i>Item2</td>
+                   <td>20%</td>
+                 </tr>
+                 <tr>
+                   <td><i class="fa fa-circle mr-2" style="color: #d13adf"></i>Item3</td>
+                   <td>70%</td>
+                 </tr>
+         <tr>
+                   <td><i class="fa fa-circle mr-2" style="color: #d13adf"></i>Item4</td>
+                   <td>20%</td>
+                 </tr>
+               </tbody>
+             </table>
+           </div>
+         </div>
+     </div>
+
+  
+
+    </div><!--End Row-->
+
+	  
+	<div class="row">
+    <!--  <div class="col-12 col-lg-8 col-xl-8">
+	    <div class="card">
+		 <div class="card-header">Incoming Volume (Past X Days)
+		   <div class="card-action">
+			 <div class="dropdown">
+			 <a href="javascript:void();" class="dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown">
+			  <i class="icon-options"></i>
+			 </a>
+				<div class="dropdown-menu dropdown-menu-right">
+				<a class="dropdown-item" href="javascript:void();">Refresh</a>
+			   </div>
+			  </div>
+		   </div>
+		 </div>
+		 <div class="card-body">
+		    <div class="chart-container-8">
+			   <canvas id="chart1"></canvas>
+			 </div>
+		 </div>
+		 
+		 <div class="row m-0 row-group text-center border-top border-light-3">
+		   <div class="col-12 col-lg-4">
+		     <div class="p-3">
+		       <h5 class="mb-0">4500</h5>
+			   <small class="mb-0">Export</small>
+		     </div>
+		   </div>
+		   <div class="col-12 col-lg-4">
+		     <div class="p-3">
+		       <h5 class="mb-0">2100</h5>
+			   <small class="mb-0">Import</small>
+		     </div>
+		   </div>
+		   <div class="col-12 col-lg-4">
+		     <div class="p-3">
+		       <h5 class="mb-0">6000</h5>
+			   <small class="mb-0">Total</small>
+		     </div>
+		   </div>
+		 </div>
+		 
+		</div>
+	 </div> -->
+<!-- 
+     <div class="col-12 col-lg-4 col-xl-4">
+        <div class="card">
+           <div class="card-header">Volume Share By Terminals
+             <div class="card-action">
+             <div class="dropdown">
+             <a href="javascript:void();" class="dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown">
+              <i class="icon-options"></i>
+             </a>
+              <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="javascript:void();">Refresh</a>
+               </div>
+              </div>
+             </div>
+           </div>
+           <div class="card-body">
+              <div class="chart-container-2">
+                 <canvas id="chart2"></canvas>
+			  </div>
+           </div>
+           <div class="table-responsive">
+             <table class="table align-items-center">
+               <tbody>
+                 <tr>
+                   <td><i class="fa fa-circle mr-2" style="color: #14abef"></i> ICD1</td>
+                   <td>5856</td>
+                 </tr>
+                 <tr>
+                   <td><i class="fa fa-circle mr-2" style="color: #02ba5a"></i>ICD2</td>
+                   <td>2602</td>
+                 </tr>
+                 <tr>
+                   <td><i class="fa fa-circle mr-2" style="color: #d13adf"></i>ICD3</td>
+                   <td>1802</td>
+                 </tr>
+				 <tr>
+                   <td><i class="fa fa-circle mr-2" style="color: #d13adf"></i>ICD4</td>
+                   <td>1105</td>
+                 </tr>
+               </tbody>
+             </table>
+           </div>
+         </div>
+     </div> -->
+	</div><!--End Row-->
+
+   <div class="row">
+  <div class="col-12 col-lg-6 col-xl-4">
+     <div class="card">
+       <div class="card-body">
+       <div class="media align-items-center">
+         <div class="w_chart easy-dash-chart1" data-percent="32">
+         <span class="w_percent"></span>
+       </div>
+       <div class="media-body ml-3">
+         <h6 class="mb-0">Inventory Carring Rate</h6>
+         <small class="mb-0">32.66% <i class="fa fa-arrow-up"></i> Since Last Month</small>
+       </div>
+     <!--   <i class="fa fa-facebook text-facebook text-right fa-2x"></i> -->
+       </div>
+     </div>
+     </div>
+   </div>
+   <div class="col-12 col-lg-6 col-xl-4">
+     <div class="card">
+       <div class="card-body">
+       <div class="media align-items-center">
+         <div class="w_chart easy-dash-chart2" data-percent="65">
+         <span class="w_percent"></span>
+       </div>
+       <div class="media-body ml-3">
+         <h6 class="mb-0">Inventory Turnover</h6>
+         <small class="mb-0">65.15% <i class="fa fa-arrow-up"></i> Since Last Month</small>
+       </div>
+      <!--  <i class="fa fa-twitter text-twitter text-right fa-2x"></i> -->
+       </div>
+     </div>
+     </div>
+   </div>
+   <div class="col-12 col-lg-12 col-xl-4">
+     <div class="card">
+       <div class="card-body">
+       <div class="media align-items-center">
+         <div class="w_chart easy-dash-chart3" data-percent="58">
+         <span class="w_percent"></span>
+       </div>
+       <div class="media-body ml-3">
+         <h6 class="mb-0">Inventory To Sales Ratio</h6>
+         <small class="mb-0">58.24% <i class="fa fa-arrow-up"></i> Since Last Month</small>
+       </div>
+      <!--  <i class="fa fa-youtube text-youtube fa-2x"></i> -->
+       </div>
+     </div>
+     </div>
+   </div>
+  </div><!--End Row-->
+
+
+  <div class="row">
+       <div class="col-12 col-lg-12 col-xl-12">
+         <div class="card">
+          <div class="card-header text-uppercase">Inventory Carrying Cost</div>
+          <div class="card-body">
+             <div class="chart-container">
+                <div id="recruitment-cost"></div>
+             </div>
+          </div>
+        </div>
+       </div>
+      
+     </div><!--end row-->
+	
+	
+
+
+	<div class="row">
+	 <div class="col-12 col-lg-12">
+	   <div class="card">
+	     <div class="card-header border-0">Product Cost Details
+		  <div class="card-action">
+             <div class="dropdown">
+             <a href="javascript:void();" class="dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown">
+              <i class="icon-options"></i>
+             </a>
+              <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="javascript:void();">Refresh</a>
+               </div>
+              </div>
+             </div>
+		 </div>
+	       <div class="table-responsive">
+			<table class="table align-items-center table-flush text-center">
+				<thead>
+					<tr>
+					 <th>Product</th>
+					
+					 <th>Units In Hand</th>
+					 <th>Units On Order</th>
+					 
+				</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Item1</td>
+					
+						<td>160 Units</td>
+						<td>50 Units</td>
+						
+					</tr>
+					<tr>
+						<td>Item2</td>
+						
+						<td>169 Units</td>
+						<td>90 Units</td>
+						
+					</tr>
+					<tr>
+						<td>Item3</td>
+					
+						<td>200 Units</td>
+						<td>10 Units</td>
+						
+					</tr>
+					<tr>
+						<td>Item4</td>
+					
+						<td>60 Units</td>
+						<td>80 Units</td>
+					
+					</tr>
+         
+				</tbody>
+			</table>
+           </div>
+	   </div>
+	 </div>
+	</div><!--End Row-->
+
+ <div class="row">
+   <div class="col-12 col-lg-12">
+     <div class="card">
+       <div class="card-header border-0">Demand Map Overview
+      <div class="card-action">
+             <div class="dropdown">
+             <a href="javascript:void();" class="dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown">
+              <i class="icon-options"></i>
+             </a>
+              <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="javascript:void();">Refresh</a>
+               </div>
+              </div>
+             </div>
+             </div>
+             <div class="card-body">
+             <div id="map"></div>
+             </div>
+     
+        
+     </div>
+   </div>
+  </div><!--End Row-->
+
+      <!--End Dashboard Content-->
+<!--start overlay-->
+	  <div class="overlay toggle-menu"></div>
+	<!--end overlay-->
+    </div>
+    <!-- End container-fluid-->
+    
+    </div><!--End content-wrapper-->
+   <!--Start Back To Top Button-->
+    <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+    <!--End Back To Top Button-->
+	
+	<!--Start footer-->
+	<footer class="footer">
+      <div class="container">
+        <div class="text-center">
+          Copyright © 2020 GrayRotes
+        </div>
+      </div>
+    </footer>
+	<!--End footer-->
+	
+
+  
+  </div><!--End wrapper-->
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+	
+ <!-- simplebar js -->
+  <script src="assets/plugins/simplebar/js/simplebar.js"></script>
+  <!-- sidebar-menu js -->
+  <script src="assets/js/sidebar-menu.js"></script>
+  <!-- loader scripts -->
+  <script src="assets/js/jquery.loading-indicator.js"></script>
+  <!-- Custom scripts -->
+  <script src="assets/js/app-script.js"></script>
+  <!-- Chart js -->
+  
+  <script src="assets/plugins/Chart.js/Chart.min.js"></script>
+  <!-- Easy Pie Chart JS -->
+  <script src="assets/plugins/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+  
+  <script src="assets/plugins/peity/jquery.peity.min.js"></script>
+  <script src="assets/plugins/apexcharts/apexcharts.js"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+
+ 
+
+  
+   
+   <script>
+   $(function() {
+    "use strict";
+	  
+	window.chartColors = {
+  red: 'rgb(255, 99, 132)',
+  orange: 'rgb(255, 159, 64)',
+  yellow: 'rgb(255, 205, 86)',
+  green: 'rgb(75, 192, 192)',
+  blue: 'rgb(54, 162, 235)',
+  purple: 'rgb(153, 102, 255)',
+  grey: 'rgb(201, 203, 207)'
+};
+			
+		// chart 1
+    if ($('#chart1').length)
+    {
+	 
+		  var ctx = document.getElementById('chart1').getContext('2d');
+		
+			var myChart = new Chart(ctx, {
+				type: 'line',
+				data: {
+					labels: ["11 Jun", "12 Jun", "13 Jun", "14 Jun", "15 Jun", "16 Jun", "17 Jun"],
+					datasets: [{
+						label: 'Export',
+						data: [10, 40, 20, 80, 40, 80, 40],
+						backgroundColor: '#02ba5a',
+						borderColor: "transparent",
+						pointRadius :"0",
+						lineTension :'0',
+						borderWidth: 3
+					}, {
+						label: 'Import',
+						data: [30, 60, 30, 85, 60, 100, 50],
+						backgroundColor: "rgba(2, 186, 90, 0.52)",
+						borderColor: "transparent",
+						pointRadius :"0",
+						lineTension :'0',
+						borderWidth: 1
+					}, {
+						label: 'Total',
+						data: [40, 80, 50, 95, 80, 110, 60],
+						backgroundColor: "rgba(2, 186, 90, 0.32)",
+						borderColor: "transparent",
+						pointRadius :"0",
+						lineTension :'0',
+						borderWidth: 1
+					}]
+				},
+			options: {
+				maintainAspectRatio: false,
+				legend: {
+				  display: true,
+				  labels: {
+					fontColor: '#585757',  
+					boxWidth:40
+				  }
+				},
+				tooltips: {
+				  displayColors:false
+				},	
+			  scales: {
+				  xAxes: [{
+					ticks: {
+						beginAtZero:true,
+						fontColor: '#585757'
+					},
+					gridLines: {
+					  display: true ,
+					  color: "rgba(0, 0, 0, 0.05)"
+					},
+				  }],
+				   yAxes: [{
+					ticks: {
+						beginAtZero:true,
+						fontColor: '#585757'
+					},
+					gridLines: {
+					  display: true ,
+					  color: "rgba(0, 0, 0, 0.05)"
+					},
+				  }]
+				 }
+
+			 }
+			}); 
+      }	
+			
+			/// Chart 2
+      if ($('#chart2').length) {
+
+			var ctx = document.getElementById("chart2").getContext('2d');
+			var myChart = new Chart(ctx, {
+				type: 'doughnut',
+				data: {
+					labels: ["Item1", "Item1", "Item1", "Item1"],
+					datasets: [{
+						backgroundColor: [
+							"#14abef",
+							"#02ba5a",
+							"#d13adf",
+							"#fba540"
+						],
+						data: [50, 20, 70, 20],
+						borderWidth: [0, 0, 0, 0]
+					}]
+				},
+			options: {
+				maintainAspectRatio: false,
+			   legend: {
+				 position :"bottom",	
+				 display: false,
+				    labels: {
+					  fontColor: '#ddd',  
+					  boxWidth:15
+				   }
+				}
+				,
+				tooltips: {
+				  displayColors:false
+				}
+			   }
+			});
+
+      }
+      /// prediction  Chart 2
+
+    if ($('#prediction_chart2').length) {
+      
+      var ctx = document.getElementById('prediction_chart2').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['sept 2020','Oct2020','Nov2020','Dec2020','Jan2021','Feb2021','Mar2021'],
+          datasets: [{
+            label: 'Actual',
+            fill: false,
+            data: [13, 20, 6, 18],
+            backgroundColor: window.chartColors.green,
+            borderColor: window.chartColors.green,
+            pointRadius :"2",
+            borderWidth: 2
+          },
+          
+          {
+            label: 'Predicted ',
+            fill: true,
+            data: ['N','N','N',18,10,10,15],
+            backgroundColor: 'rgb(255, 205, 86, 0.3)',
+            borderColor: window.chartColors.green,
+            pointRadius :"2",
+            borderWidth: 2
+          }]
+        },
+        options: {
+        responsive: true,       
+        tooltips: {
+          mode: 'index',
+          intersect: false,
+        },
+        hover: {
+          mode: 'nearest',
+          intersect: true
+        },
+        scales: {
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: false,
+              labelString: 'Month'
+            }
+          }],
+          yAxes: [{
+            display: true,
+            scaleLabel: {
+              display: false,
+              labelString: 'Value'
+            }
+          }]
+        }
+      }
+      });
+      
+    }
+      
+      /////////// chart end
+
+      // easy pie chart 
+  
+   $('.easy-dash-chart1').easyPieChart({
+    easing: 'easeOutBounce',
+    barColor : '#3b5998',
+    lineWidth: 10,
+    trackColor : 'rgba(0, 0, 0, 0.08)',
+    scaleColor: false,
+    onStep: function(from, to, percent) {
+      $(this.el).find('.w_percent').text(Math.round(percent));
+    }
+   });  
+
+
+   $('.easy-dash-chart2').easyPieChart({
+    easing: 'easeOutBounce',
+    barColor : '#55acee',
+    lineWidth: 10,
+    trackColor : 'rgba(0, 0, 0, 0.08)',
+    scaleColor: false,
+    onStep: function(from, to, percent) {
+      $(this.el).find('.w_percent').text(Math.round(percent));
+    }
+   });
+
+
+   $('.easy-dash-chart3').easyPieChart({
+    easing: 'easeOutBounce',
+    barColor : '#e52d27',
+    lineWidth: 10,
+    trackColor : 'rgba(0, 0, 0, 0.08)',
+    scaleColor: false,
+    onStep: function(from, to, percent) {
+      $(this.el).find('.w_percent').text(Math.round(percent));
+    }
+   });
+
+
+
+  if ($('#recruitment-cost').length)
+   {
+     
+    var options = {
+            chart: {
+                height: 325,
+                type: 'bar',
+                stacked: false,
+                foreColor: '#4e4e4e',
+                toolbar: {
+                      show: false
+                    },
+                dropShadow: {
+                    enabled: true,
+                    opacity: 0.1,
+                    blur: 3,
+                    left: -7,
+                    top: 22,
+                }
+            },
+            plotOptions: {
+                bar: {
+            columnWidth: '50%',
+              endingShape: 'rounded',
+                    dataLabels: {
+                        position: 'top', // top, center, bottom
+                    },
+                }
+            },
+            dataLabels: {
+                enabled: false,
+                formatter: function(val) {
+                  return parseInt(val);
+                },
+                offsetY: -20,
+                style: {
+                    fontSize: '14px',
+                    colors: ["#304758"]
+                }
+            },
+            stroke: {
+                show: true,
+                width: [0, 0, 0],
+                dashArray: [0, 0, 0],
+                curve: 'smooth'
+               // colors: ['transparent']
+            },
+            grid:{
+                show: true,
+                borderColor: 'rgba(0, 0, 0, 0.10)',
+            },
+            series: [{
+                name: 'Storage Costs',
+                data: [44, 75, 37, 56, 61, 58]
+            }, {
+                name: 'Handling Costs',
+                data: [76, 85, 101, 98, 87, 105]
+            }, {
+                name: 'Loss',
+                data: [20, 41, 26, 46, 30, 50]
+            }],
+            xaxis: {
+                categories: ['WareHouse1', 'WareHouse2', 'WareHouse3', 'WareHouse4', 'WareHouse5', 'WareHouse6'],
+            },
+            fill: {
+                type: 'gradient',
+                gradient: {
+                    shade: 'dark',
+                    gradientToColors: [ '#009efd', '#ff6a00', '#000428'],
+                    shadeIntensity: 1,
+                    type: 'vertical',
+                    opacityFrom: 1,
+                    opacityTo: 1,
+                    stops: [0, 100, 100, 100]
+                },
+            },
+            colors: ["#2af598", "#ee0979", '#0072ff'],
+            tooltip: {
+                theme: 'dark',
+                y: {
+                    formatter: function (val) {
+                        return "% " + val + " "
+                    }
+                }
+            },
+            responsive: [{
+                breakpoint: 480,
+                options: {
+                    chart: {
+                  height: 330,
+                  stacked: true,
+                          },
+                legend: {
+                  show: !0,
+                  position: "top",
+                  horizontalAlign: "left",
+                  offsetX: -20,
+                  fontSize: "10px",
+                  markers: {
+                    radius: 50,
+                    width: 10,
+                    height: 10
+                  }
+                  },
+                  plotOptions: {
+                  bar: {
+                    columnWidth: '30%'
+                    }
+                  }
+                      }
+                  }]
+        }
+
+        var chart = new ApexCharts(
+            document.querySelector("#recruitment-cost"),
+            options
+        );
+
+        chart.render();
+   }
+    
+	
+	  });
+
+
+   </script>
+   <script>
+  // TO MAKE THE MAP APPEAR YOU MUST
+  // ADD YOUR ACCESS TOKEN FROM
+  // https://account.mapbox.com
+  mapboxgl.accessToken = 'pk.eyJ1IjoicmFpcy10bSIsImEiOiJjazhhcG9iaXAwNGYwM2x0cTV3MXNlMzJuIn0.xpAEjsKMI_hrKJPPcCmooQ';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/light-v10',
+center: [-103.59179687498357, 40.66995747013945],
+zoom: 3
+});
+ 
+map.addControl(new mapboxgl.NavigationControl());
+map.on('load', function () {
+// Add a new source from our GeoJSON data and
+// set the 'cluster' option to true. GL-JS will
+// add the point_count property to your source data.
+map.addSource('earthquakes', {
+type: 'geojson',
+// Point to GeoJSON data. This example visualizes all M1.0+ earthquakes
+// from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
+data:
+'https://docs.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson',
+cluster: true,
+clusterMaxZoom: 14, // Max zoom to cluster points on
+clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
+});
+ 
+map.addLayer({
+id: 'clusters',
+type: 'circle',
+source: 'earthquakes',
+filter: ['has', 'point_count'],
+paint: {
+// Use step expressions (https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-step)
+// with three steps to implement three types of circles:
+//   * Blue, 20px circles when point count is less than 100
+//   * Yellow, 30px circles when point count is between 100 and 750
+//   * Pink, 40px circles when point count is greater than or equal to 750
+'circle-color': [
+'step',
+['get', 'point_count'],
+'#51bbd6',
+100,
+'#f1f075',
+750,
+'#f28cb1'
+],
+'circle-radius': [
+'step',
+['get', 'point_count'],
+20,
+100,
+30,
+750,
+40
+]
+}
+});
+ 
+map.addLayer({
+id: 'cluster-count',
+type: 'symbol',
+source: 'earthquakes',
+filter: ['has', 'point_count'],
+layout: {
+'text-field': '{point_count_abbreviated}',
+'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
+'text-size': 12
+}
+});
+ 
+map.addLayer({
+id: 'unclustered-point',
+type: 'circle',
+source: 'earthquakes',
+filter: ['!', ['has', 'point_count']],
+paint: {
+'circle-color': '#11b4da',
+'circle-radius': 4,
+'circle-stroke-width': 1,
+'circle-stroke-color': '#fff'
+}
+});
+ 
+// inspect a cluster on click
+map.on('click', 'clusters', function (e) {
+var features = map.queryRenderedFeatures(e.point, {
+layers: ['clusters']
+});
+var clusterId = features[0].properties.cluster_id;
+map.getSource('earthquakes').getClusterExpansionZoom(
+clusterId,
+function (err, zoom) {
+if (err) return;
+ 
+map.easeTo({
+center: features[0].geometry.coordinates,
+zoom: zoom
+});
+}
+);
+});
+ 
+// When a click event occurs on a feature in
+// the unclustered-point layer, open a popup at
+// the location of the feature, with
+// description HTML from its properties.
+map.on('click', 'unclustered-point', function (e) {
+var coordinates = e.features[0].geometry.coordinates.slice();
+var mag = e.features[0].properties.mag;
+var tsunami;
+ 
+if (e.features[0].properties.tsunami === 1) {
+tsunami = 'yes';
+} else {
+tsunami = 'no';
+}
+ 
+// Ensure that if the map is zoomed out such that
+// multiple copies of the feature are visible, the
+// popup appears over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+new mapboxgl.Popup()
+.setLngLat(coordinates)
+.setHTML(
+'magnitude: ' + mag + '<br>Was there a tsunami?: ' + tsunami
+)
+.addTo(map);
+});
+ 
+map.on('mouseenter', 'clusters', function () {
+map.getCanvas().style.cursor = 'pointer';
+});
+map.on('mouseleave', 'clusters', function () {
+map.getCanvas().style.cursor = '';
+});
+});
+</script>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <!--  <h4 class="modal-title">Modal Header</h4> -->
+      </div>
+      <div class="modal-body">
+        <table class="table align-items-center table-flush text-center table-bordered">
+        <thead>
+          <tr>
+           <th>In Stock</th>
+          
+           <th>Out Of Stock</th>
+          
+           
+        </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Item1</td>
+          
+            <td>Item3</td>
+           
+            
+          </tr>
+          <tr>
+            <td>Item2</td>
+            
+            <td>Item4</td>
+           
+            
+          </tr>
+         
+        </tbody>
+      </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="myModal1" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <!--   <h4 class="modal-title">Modal Header</h4> -->
+      </div>
+      <div class="modal-body">
+        <table class="table align-items-center table-flush text-center table-bordered">
+        <thead>
+          <tr>
+           <th>Name</th>
+            <th>Out Of Stock</th>
+           <th>Total</th>
+          
+           
+        </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Item1</td>
+            <td>5</td>
+            <td>100</td>
+           
+            
+          </tr>
+          <tr>
+            <td>Item2</td>
+            <td>5</td>
+            <td>100</td>
+           
+            
+          </tr>
+          <tr>
+            <td>Item2</td>
+            <td>5</td>
+            <td>100</td>
+           
+            
+          </tr>
+          <tr>
+            <td>Item2</td>
+            <td>5</td>
+            <td>100</td>
+           
+            
+          </tr>
+         
+        </tbody>
+      </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="myModal2" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+       
+      </div>
+      <div class="modal-body">
+        <table class="table align-items-center table-flush text-center table-bordered">
+        <thead>
+          <tr>
+           <th>Name</th>
+            <th>Back Orders</th>
+           <th>Out Of stock Orders</th>
+          
+           
+        </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Item1</td>
+            <td>5</td>
+            <td>25</td>
+           
+            
+          </tr>
+          <tr>
+            <td>Item2</td>
+            <td>2</td>
+            <td>25</td>
+           
+            
+          </tr>
+          <tr>
+            <td>Item2</td>
+            <td>1</td>
+            <td>25</td>
+           
+            
+          </tr>
+          <tr>
+            <td>Item2</td>
+            <td>2</td>
+            <td>15</td>
+           
+            
+          </tr>
+         
+        </tbody>
+      </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+  
+</body>
+</html>

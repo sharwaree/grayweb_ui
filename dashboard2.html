@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+  <title>GrayRotes - Dashboard</title>
+  <!--favicon-->
+  <link rel="icon" href="https://grayroutes.in/images/favicon11.ico" type="image/x-icon"/>
+  <!-- simplebar CSS-->
+  <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet"/>
+  <!-- Bootstrap core CSS-->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- animate CSS-->
+  <link href="assets/css/animate.css" rel="stylesheet" type="text/css"/>
+  <!-- Icons CSS-->
+  <link href="assets/css/icons.css" rel="stylesheet" type="text/css"/>
+  <!-- Sidebar CSS-->
+  <link href="assets/css/sidebar-menu.css" rel="stylesheet"/>
+  <!-- Custom Style-->
+  <link href="assets/css/app-style.css" rel="stylesheet"/>
+  <!-- skins CSS-->
+  <link href="assets/css/skins.css" rel="stylesheet"/>
+  
+</head>
+
+<body>
+
+   <!-- start loader -->
+   <div id="pageloader-overlay" class="visible incoming"><div class="loader-wrapper-outer"><div class="loader-wrapper-inner"><div class="loader"></div></div></div></div>
+   <!-- end loader -->
+
+<!-- Start wrapper-->
+ <div id="wrapper">
+ 
+  <!--Start sidebar-wrapper-->
+   <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
+     <div class="brand-logo text-left pl-3">
+      <a href="index.html">
+       <img class="logo-icon" alt="logo icon" src="https://grayweb.grayroutes.in/images/logo1.png" style="width:100px;">
+       <!--<h5 class="logo-text">GrayRotes Admin</h5>-->
+     </a>
+   </div>
+  
+   <ul class="sidebar-menu">
+      <li class="sidebar-header">MAIN NAVIGATION</li>
+      <li class="active">
+        <a href="javaScript:void();" class="waves-effect">
+          <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span><i class="fa fa-angle-left pull-right"></i>
+        </a>
+		<ul class="sidebar-submenu">
+		  <li><a href="index.html"><i class="zmdi zmdi-dot-circle-alt"></i> Data Display </a></li>
+		  <li class="active"><a href="javascript:void(0);"><i class="zmdi zmdi-dot-circle-alt"></i> Data Prediction </a></li>
+		</ul>
+      </li>
+     
+    </ul>
+   
+   </div>
+   <!--End sidebar-wrapper-->
+
+<!--Start topbar header-->
+<header class="topbar-nav">
+ <nav id="header-setting" class="navbar navbar-expand fixed-top">
+  <ul class="navbar-nav mr-auto align-items-center">
+    <li class="nav-item">
+      <a class="nav-link toggle-menu" href="javascript:void();">
+       <i class="icon-menu menu-icon"></i>
+     </a>
+    </li>
+  </ul>
+     
+  <ul class="navbar-nav align-items-center right-nav-link">
+    <li class="nav-item dropdown-lg">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javascript:void();">
+      <i class="fa fa-envelope-open-o"></i><span class="badge badge-primary badge-up">12</span></a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <ul class="list-group list-group-flush">
+         <li class="list-group-item d-flex justify-content-between align-items-center">
+          You have 12 new messages
+          <span class="badge badge-primary">12</span>
+          </li>
+          <li class="list-group-item">
+          <a href="javaScript:void();">
+           <div class="media">
+             <div class="avatar"><img class="align-self-start mr-3" src="https://via.placeholder.com/110x110" alt="user avatar"></div>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">Jhon Deo</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+            <small>Today, 4:10 PM</small>
+            </div>
+          </div>
+          </a>
+          </li>
+          <li class="list-group-item text-center"><a href="javaScript:void();">See All Messages</a></li>
+        </ul>
+        </div>
+    </li>
+    <li class="nav-item dropdown-lg">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javascript:void();">
+    <i class="fa fa-bell-o"></i><span class="badge badge-info badge-up">14</span></a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+          You have 14 Notifications
+          <span class="badge badge-info">14</span>
+          </li>
+          <li class="list-group-item">
+          <a href="javaScript:void();">
+           <div class="media">
+             <i class="zmdi zmdi-accounts fa-2x mr-3 text-info"></i>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">New Registered Users</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+            </div>
+          </div>
+          </a>
+          </li>
+          <li class="list-group-item text-center"><a href="javaScript:void();">See All Notifications</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
+        <span class="user-profile"><img src="assets/images/person.jpg" class="img-circle" alt="user avatar"></span>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-right">
+       <li class="dropdown-item user-details">
+        <a href="javaScript:void();">
+           <div class="media">
+             <div class="avatar"><img class="align-self-start mr-3" src="https://via.placeholder.com/110x110" alt="user avatar"></div>
+            <div class="media-body">
+            <h6 class="mt-2 user-title">Rais Manasiya</h6>
+            <p class="user-subtitle">rais@grayfos.com</p>
+            </div>
+           </div>
+          </a>
+        </li>
+        <li class="dropdown-divider"></li>
+        <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
+        <li class="dropdown-divider"></li>
+        <li class="dropdown-item"><i class="icon-power mr-2"></i> Logout</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</header>
+<!--End topbar header-->
+
+<div class="clearfix"></div>
+	
+  <div class="content-wrapper">
+    <div class="container-fluid">
+
+      <!--Start Dashboard Content-->
+
+   <div class="row">
+			<div class="col-lg-12">
+			   
+			   <div class="card">
+			     <div class="card-body">
+				    <form>
+					<div class="form-group row">
+					  <div class="col-sm-2">
+						<div class="icheck-material-primary">
+						<input type="radio" id="algo1" name="algo" checked="checked">
+						<label for="algo1">Algo 1</label>
+					  </div>
+					  </div>
+					  <div class="col-sm-2">
+						<div class="icheck-material-primary">
+						<input type="radio" id="algo2" name="algo">
+						<label for="algo2">Algo 2</label>
+					  </div>
+					  </div>
+					  <div class="col-sm-2">
+						<div class="icheck-material-primary">
+						<input type="radio" id="any" name="algo">
+						<label for="any">Choose Best</label>
+					  </div>
+					  </div>
+					</div>
+					
+					<div class="form-group row">
+					  <label for="input-21" class="col-sm-3 col-form-label">Prediction Lenght in Days:</label>
+					  <div class="col-sm-3">
+						<select class="custom-select">
+							<option>1</option>
+							<option>2</option>
+							<option selected>3</option>
+						</select>
+					  </div>
+					</div>
+					
+					<div class="form-group row">
+					  <div class="col-sm-2">
+						<div class="icheck-material-primary">
+						<input type="checkbox" id="Seasonality" checked="checked">
+						<label for="Seasonality">Seasonality</label>
+					  </div>
+					  </div>
+					  <div class="col-sm-2">
+						<div class="icheck-material-primary">
+						<input type="checkbox" id="weather">
+						<label for="weather">Weather</label>
+					  </div>
+					  </div>
+					</div>
+					
+					 
+					<hr>
+					 <div class="form-group row mt-3 mb-0">
+					  <div class="col-sm-10">
+						<button type="submit" class="btn btn-primary px-5">Run Prediction Engine</button>
+					  </div>
+					</div>
+					</form>
+				 </div>
+			 </div>
+
+
+			</div>
+		  </div>
+	
+		
+	<div class="row">
+     <div class="col-12 col-lg-12 col-xl-12">
+	    <div class="card">
+		 <div class="card-header">Regression Analysis</div>
+		 <div class="card-body">
+				<div class="row">
+					<div class="col-12 col-lg-6 col-xl-6">
+						<canvas id="regrassion_chart1"></canvas>
+					</div>
+					<div class="col-12 col-lg-6 col-xl-6">
+						<canvas id="regrassion_chart2"></canvas>
+					</div>
+				</div>
+		 </div>
+		 
+		 
+		</div>
+	 </div>
+
+    </div><!--End Row-->
+	
+	<div class="row">
+     <div class="col-12 col-lg-12 col-xl-12">
+	    <div class="card">
+		 <div class="card-header">Prediction for next 3 Days</div>
+		 <div class="card-body">
+				<div class="row">
+					<div class="col-12 col-lg-12 col-xl-12">
+						<canvas id="prediction_chart1"></canvas>
+					</div>
+				</div>
+		 </div>
+		 
+		 
+		</div>
+	 </div>
+
+    </div><!--End Row-->
+	
+	<div class="row">
+     <div class="col-12 col-lg-12 col-xl-12">
+	    <div class="card">
+		 <div class="card-header">Prediction for next 3 Days</div>
+		 <div class="card-body">
+				<div class="row">
+					<div class="col-12 col-lg-12 col-xl-12">
+						<canvas id="prediction_chart2"></canvas>
+					</div>
+				</div>
+		 </div>
+		 
+		 
+		</div>
+	 </div>
+
+    </div><!--End Row-->
+      <!--End Dashboard Content-->
+<!--start overlay-->
+	  <div class="overlay toggle-menu"></div>
+	<!--end overlay-->
+    </div>
+    <!-- End container-fluid-->
+    
+    </div><!--End content-wrapper-->
+   <!--Start Back To Top Button-->
+    <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+    <!--End Back To Top Button-->
+	
+	<!--Start footer-->
+	<footer class="footer">
+      <div class="container">
+        <div class="text-center">
+          Copyright © 2020 GrayRotes
+        </div>
+      </div>
+    </footer>
+	<!--End footer-->
+	
+
+  
+  </div><!--End wrapper-->
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+	
+ <!-- simplebar js -->
+  <script src="assets/plugins/simplebar/js/simplebar.js"></script>
+  <!-- sidebar-menu js -->
+  <script src="assets/js/sidebar-menu.js"></script>
+  <!-- loader scripts -->
+  <script src="assets/js/jquery.loading-indicator.js"></script>
+  <!-- Custom scripts -->
+  <script src="assets/js/app-script.js"></script>
+  <!-- Chart js -->
+  
+  <script src="assets/plugins/Chart.js/Chart.min.js"></script>
+  <!-- Easy Pie Chart JS -->
+  <script src="assets/plugins/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+  
+  <script src="assets/plugins/peity/jquery.peity.min.js"></script>
+  
+   
+   <script>
+   $(function() {
+    "use strict";
+	  
+	window.chartColors = {
+	red: 'rgb(255, 99, 132)',
+	orange: 'rgb(255, 159, 64)',
+	yellow: 'rgb(255, 205, 86)',
+	green: 'rgb(75, 192, 192)',
+	blue: 'rgb(54, 162, 235)',
+	purple: 'rgb(153, 102, 255)',
+	grey: 'rgb(201, 203, 207)'
+};
+			
+		// chart 1	 	
+			
+			if ($('#regrassion_chart1').length) {
+			
+			var ctx = document.getElementById('regrassion_chart1').getContext('2d');
+			var myChart = new Chart(ctx, {
+				type: 'line',
+				data: {
+					labels: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
+					datasets: [{
+						label: 'Param 1',
+						fill: false,
+						data: [20, 30, 40, 45, 40, 30, 20,10],
+						backgroundColor: window.chartColors.red,
+						borderColor: window.chartColors.red,
+						pointRadius :"2",
+						borderWidth: 2
+					},
+					{
+						label: 'Param 2',
+						fill: false,
+						data: [10, 20, 30, 35, 30, 20, 10,0],
+						backgroundColor: window.chartColors.blue,
+						borderColor: window.chartColors.blue,
+						pointRadius :"2",
+						borderWidth: 2
+					},
+					{
+						label: 'Param 3',
+						fill: false,
+						data: [50,35,20,10,20,35,50],
+						backgroundColor: window.chartColors.gray,
+						borderColor: window.chartColors.gray,
+						pointRadius :"2",
+						borderWidth: 2
+					}]
+				},
+				options: {
+				responsive: true,				
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: false,
+							labelString: 'Month'
+						}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: false,
+							labelString: 'Value'
+						}
+					}]
+				}
+			}
+			});
+			
+		}
+		
+		//////////////// regrassion chart 2
+		
+		
+		if ($('#regrassion_chart2').length) {
+			
+			var ctx = document.getElementById('regrassion_chart2').getContext('2d');
+			var myChart = new Chart(ctx, {
+				type: 'line',
+				data: {
+					labels: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
+					datasets: [{
+						label: 'Series 1',
+						fill: false,
+						data: [20, 30, 40, 45, 40, 30, 20,10],
+						backgroundColor: window.chartColors.green,
+						borderColor: window.chartColors.green,
+						pointRadius :"2",
+						borderWidth: 2
+					},
+					{
+						label: 'Series 2',
+						fill: false,
+						data: [10, 20, 30, 35, 30, 20, 10,0],
+						backgroundColor: window.chartColors.purple,
+						borderColor: window.chartColors.purple,
+						pointRadius :"2",
+						borderWidth: 2
+					},
+					{
+						label: 'Series 3',
+						fill: false,
+						data: [50,35,20,10,20,35,50],
+						backgroundColor: window.chartColors.gray,
+						borderColor: window.chartColors.gray,
+						pointRadius :"2",
+						borderWidth: 2
+					}]
+				},
+				options: {
+				responsive: true,				
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: false,
+							labelString: 'Month'
+						}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: false,
+							labelString: 'Value'
+						}
+					}]
+				}
+			}
+			});
+			
+		}
+			/// prediction  Chart 1
+			
+			if ($('#prediction_chart1').length) {
+			var ctx = document.getElementById("prediction_chart1").getContext('2d');
+			var myChart = new Chart(ctx, {
+				type: 'bar',
+				data: {
+					labels: ['Day 1','Day 2','Day 3','Day 4','Day 5','Day 6','Day 7','Day 8','Day 9','Day 10','Day 11'],
+					datasets: [{
+						label: 'Export',
+						data: [13, 20, 4, 18, 29, 25, 8,15],
+						backgroundColor: "#752208"
+					}, {
+						label: 'Import',
+						data: [31, 30, 6, 6, 21, 4, 11,10],
+						backgroundColor: "#d29910"
+					}, 
+					{
+						label: 'Predicted Export',
+						data: [0, 0, 0, 0, 0, 0, 0,0,13, 20, 4],
+						backgroundColor: "#054f28"
+					},
+					{
+						label: 'Predicted Import',
+						data: [0, 0, 0, 0, 0, 0, 0,0,20, 40, 15],
+						backgroundColor: "#02ba5a" 
+					}]
+				},
+				options: {
+					tooltips: {
+						mode: 'index',
+						intersect: false
+					},
+					responsive: true,
+					scales: {
+						xAxes: [{
+							stacked: true,							
+							gridLines: {
+							  display: false 
+							}
+						}],
+						yAxes: [{
+							stacked: true,							
+							gridLines: {
+							  display: false 
+							}
+						}]
+					}
+				}
+			});
+		}
+		
+		/// prediction  Chart 2
+
+		if ($('#prediction_chart2').length) {
+			
+			var ctx = document.getElementById('prediction_chart2').getContext('2d');
+			var myChart = new Chart(ctx, {
+				type: 'line',
+				data: {
+					labels: ['Day 1','Day 2','Day 3','Day 4','Day 5','Day 6','Day 7','Day 8','Day 9','Day 10','Day 11'],
+					datasets: [{
+						label: 'Export',
+						fill: false,
+						data: [13, 20, 4, 18, 7, 4, 8,10],
+						backgroundColor: window.chartColors.green,
+						borderColor: window.chartColors.green,
+						pointRadius :"2",
+						borderWidth: 2
+					},
+					{
+						label: 'Import',
+						fill: false,
+						data: [3, 30, 6, 6, 3, 4, 11,15],
+						backgroundColor: window.chartColors.purple,
+						borderColor: window.chartColors.purple,
+						pointRadius :"2",
+						borderWidth: 2
+					},
+					{
+						label: 'Predicted Export',
+						fill: true,
+						data: ['N', 'N','N','N','N','N','N',10,10,15,18],
+						backgroundColor: 'rgb(255, 205, 86, 0.3)',
+						borderColor: window.chartColors.green,
+						pointRadius :"2",
+						borderWidth: 2
+					},
+					{
+						label: 'Predicted Import',
+						fill: true,
+						data: ['N', 'N','N','N','N','N','N',15,15,20,22],
+						backgroundColor: 'rgb(255, 159, 64, 0.3)',
+						borderColor: window.chartColors.purple,
+						pointRadius :"2",
+						borderWidth: 2
+					}]
+				},
+				options: {
+				responsive: true,				
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: false,
+							labelString: 'Month'
+						}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: false,
+							labelString: 'Value'
+						}
+					}]
+				}
+			}
+			});
+			
+		}
+			
+			/////////// chart end
+			
+	  });	
+   </script>
+
+  
+</body>
+</html>
